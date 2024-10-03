@@ -1,8 +1,13 @@
+"use client"
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
+import { useMediaQuery } from "@mui/material";
 
 const BrowseCategories = () => {
+
+const matches = useMediaQuery("(max-width: 959px)");
+
   const categoriesTypes = [
     { name: "Casual", image: "/assets/images/image-15.png" },
     { name: "Formal", image: "/assets/images/image-16.png" },
@@ -21,12 +26,15 @@ const BrowseCategories = () => {
       <Box
         sx={{
           backgroundColor: "#F0F0F0",
-          width: "90%",
+          width: {
+            xs:"60%",
+            md:'90%',
+          },
           borderRadius: "40px",
           display:'flex',
           flexDirection: "column",
           gap: '20px',
-          padding:'45px 0 55px 0',
+          padding:'45px 20px 55px 20px',
         }}
       >
         <Box
@@ -34,11 +42,18 @@ const BrowseCategories = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            textAlign:{
+              xs:"center",
+              md:"left",
+            },
           }}
         >
           <Typography
             sx={{
-              fontSize: "48px",
+              fontSize: {
+                xs:"32px",
+                md:'48px',
+              },
               fontWeight: "bolder",
             }}
           >
@@ -50,6 +65,10 @@ const BrowseCategories = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
+            flexWrap:{
+              xs:'wrap',
+              md:'nowrap',
+            },
             gap:'15px',
           }}
         >
@@ -59,8 +78,9 @@ const BrowseCategories = () => {
               sx={{
                 backgroundImage: `url(${item.image})`,
                 backgroundRepeat: "no-repeat",
+                backgroundPosition:'center',
                 backgroundSize: "cover",
-                width: index === 0 ? "407px" : "814px",
+                width: index === 0 ? "407px" : !matches ? "814px" : "407px",
                 height: "289px",
                 borderRadius: "20px",
                 padding: "30px 0 0 30px",
@@ -68,7 +88,10 @@ const BrowseCategories = () => {
             >
               <Typography
                 sx={{
-                  fontSize: "36px",
+                  fontSize: {
+                    xs:"24px",
+                    md:"36px",
+                  },
                   fontWeight: "bold",
                 }}
               >
@@ -81,6 +104,10 @@ const BrowseCategories = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
+            flexWrap:{
+              xs:"wrap",
+              md:"nowrap",
+            },
             gap: "15px",
           }}
         >
@@ -90,8 +117,9 @@ const BrowseCategories = () => {
               sx={{
                 backgroundImage: `url(${item.image})`,
                 backgroundRepeat: "no-repeat",
+                backgroundPosition:'center',
                 backgroundSize: "cover",
-                width: index === 0 ? "814px" : "407px",
+                width: index === 0 & !matches ? "814px" : "407px",
                 height: "289px",
                 borderRadius: "20px",
                 padding: "30px 0 0 30px",
@@ -99,7 +127,10 @@ const BrowseCategories = () => {
             >
               <Typography
                 sx={{
-                  fontSize: "36px",
+                  fontSize: {
+                    xs:"24px",
+                    md:"36px",
+                  },
                   fontWeight: "bold",
                 }}
               >
