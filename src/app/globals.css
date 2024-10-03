@@ -1,42 +1,37 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+  font-family: "Integral CF";
+  src: url("./assets/fonts/Integral_CF/Fontspring-DEMO-integralcf-regular.otf") format('otf');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+@font-face {
+  font-family: "Integral CF";
+  src: url("./assets/fonts/Integral_CF/Fontspring-DEMO-integralcf-medium.otf") format('otf');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Integral CF";
+  src: url("./assets/fonts/Integral_CF/Fontspring-DEMO-integralcf-bold.otf") format('otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Integral CF";
+  src: url("./assets/fonts/Integral_CF/Fontspring-DEMO-integralcf-heavy.otf") format('otf');
+  font-weight: bolder;
+  font-style: normal;
 }
