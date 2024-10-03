@@ -22,7 +22,7 @@ const Home = () => {
         }}
       >
         <NewArrivals />
-        <Divider sx={{ width: "90%", margin: "0 auto" }} />
+        <Divider sx={{ width: "85%", margin: "0 auto" }} />
         <TopSelling />
       </Box>
       <BrowseCategories />
