@@ -21,7 +21,7 @@ const Home = () => {
           gap: "40px",
         }}
       >
-        <NewArrivals />
+        <NewArrivals/>
         <Divider sx={{ width: "85%", margin: "0 auto" }} />
         <TopSelling />
       </Box>
